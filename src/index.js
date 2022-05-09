@@ -259,5 +259,8 @@ export default class DynamicVirtualScroll {
     }
 
     // 停止监测
-    stopObserver() {}
+    stopObserver() {
+        this.observer.unobserve(this.firstItem);
+        this.observer.unobserve(this.lastItem);
+    }
 }
